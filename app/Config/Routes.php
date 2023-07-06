@@ -34,6 +34,10 @@ $routes->get('/saya', 'Home::saya');
 $routes->get('/saya/(:any)/(:num)', 'Home::saya/$1/$2');
 $routes->get('/input', 'Home::sapa');
 $routes->post('/input', 'Home::hasilsapa');
+// belajar di rumah hari kamis 6/7/2023
+$routes->get('/login', 'Home::login');
+$routes->post('/login', 'Home::nlogin');
+
 
 /*
  * --------------------------------------------------------------------
