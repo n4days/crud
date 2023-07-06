@@ -32,6 +32,8 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/saya', 'Home::saya');
 $routes->get('/saya/(:any)/(:num)', 'Home::saya/$1/$2');
+$routes->get('/input', 'Home::sapa');
+$routes->post('/input', 'Home::hasilsapa');
 
 /*
  * --------------------------------------------------------------------

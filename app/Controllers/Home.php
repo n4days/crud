@@ -9,8 +9,18 @@ class Home extends BaseController
         return view('welcome_message');
     }
 
+    public function sapa()
+    {
+        return view('sapa');
+    }
+
+    public function hasilsapa()
+    {
+        echo 'Nama yang diinput : ' . $this->request->getVar('nama');
+    }
+
     public function saya($nama = 'irsyad', $umur = 23)
     {
-        echo ('Nama saya : ' . $nama . ' Umur : ' . $umur);
+        echo 'Nama saya : ' . $nama . ' Umur : ' . $umur;
     }
 }
