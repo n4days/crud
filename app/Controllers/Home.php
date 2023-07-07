@@ -28,9 +28,7 @@ class Home extends BaseController
     // Outputan
     public function nlogin()
     {
-        echo 'Email     : ' . $this->request->getVar('email');
-        echo ' ';
-        echo 'Password  : ' . $this->request->getVar('pass');
+        return view('nlogin');
     }
 
     public function saya($nama = 'irsyad', $umur = 23)
