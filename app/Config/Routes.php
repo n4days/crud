@@ -31,6 +31,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->post('/', 'Home::simpanUser');
+$routes->delete('/(:num)', 'Home::deleteUser/$1');
 // $routes->get('/saya', 'Home::saya');
 // $routes->get('/saya/(:any)/(:num)', 'Home::saya/$1/$2');
 // $routes->get('/input', 'Home::sapa');

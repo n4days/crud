@@ -34,8 +34,21 @@ class Home extends BaseController
             'alamat' => $this->request->getVar('alamat'),
         ];
 
-        $this->userModel->insert($dataInsert);
-        return redirect()->to('/');
+        if ($this->userModel->insert($dataInsert)) {
+            session()->setFlashdata('success','Data Berhasil Disimpan');
+            return redirect()->to('/');
+        }
+
+        // $this->userModel->insert($dataInsert);
+        // return redirect()->to('/');
+    }
+
+    public function deleteUser($id)
+    {
+        if ($this->userModel->delete($id)) {
+            session()->setFlashdata('success','Data Berhasil Dihapus');
+            return redirect()->to('/');
+        }
     }
 
     // public function sapa()
