@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\User;
 
 class Home extends BaseController
 {
     protected $userModel;
 
-    public function __construct(){
-        $this->userModel=new User();
+    public function __construct()
+    {
+        $this->userModel = new User();
     }
 
 
@@ -35,7 +37,7 @@ class Home extends BaseController
         ];
 
         if ($this->userModel->insert($dataInsert)) {
-            session()->setFlashdata('success','Data Berhasil Disimpan');
+            session()->setFlashdata('success', 'Data Berhasil Disimpan');
             return redirect()->to('/');
         }
 
@@ -46,7 +48,7 @@ class Home extends BaseController
     public function deleteUser($id)
     {
         if ($this->userModel->delete($id)) {
-            session()->setFlashdata('success','Data Berhasil Dihapus');
+            session()->setFlashdata('success', 'Data Berhasil Dihapus');
             return redirect()->to('/');
         }
     }
@@ -60,7 +62,7 @@ class Home extends BaseController
     // {
     //     echo 'Nama yang diinput : ' . $this->request->getVar('nama');
     // }
-    
+
     // // Inputan
     // public function login()
     // {
